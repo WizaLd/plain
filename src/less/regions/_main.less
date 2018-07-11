@@ -2,7 +2,6 @@
 .main {
   background-image: url("./../../images/workplace-2.png");
   background-repeat: no-repeat;
-  background-attachment: local;
   background-position: 50% 105%;
 }
 
@@ -399,6 +398,9 @@
       bottom:0;
       z-index: 4;
       opacity: 0.65;
+
+     .IeOnly({bottom: -50%});
+
     }
 
   }
@@ -496,6 +498,7 @@
 .task {
   display: inline-block;
   width: @task-width;
+  .IeOnly({width: @task-width - 2px});
 
   &__icon {
     margin: 0 60px 0 0;
