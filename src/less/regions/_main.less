@@ -285,11 +285,54 @@
   }
 }
 
+
+
 .slider {
+
+
+
   background: @body-color;
   width: 1280rem/16;
   margin: 0 auto;
+  position: relative;
+.owl-nav button {
+
+
+  &.owl-prev, &.owl-next {
+    font-size: 0;
+    position: absolute;
+    line-height: 100%;
+    transform: translateY(-50%);
+    top: 50%;
+    &:focus {
+      outline: none;
+    }
+    &:before {
+      font-family: icomoon;
+      font-size: 42rem/16;
+      line-height: 100%;
+      color: grey;
+    }
+  }
+  &.owl-prev {
+
+    left: @owl-arrow__gap-horizontal;
+    transform: translateY(-50%) scaleX(-1);
+    &:before {
+      content: '\e90a';
+    }
+  }
+  &.owl-next {
+
+    right: @owl-arrow__gap-horizontal;
+
+    &:before {
+      content: '\e90a';
+    }
+  }
+ }
 }
+
 
 .i-m-nikon {
 
@@ -353,7 +396,7 @@
       top:0;
       left:0;
       right:46.5%;
-      bottom:0%;
+      bottom:0;
       z-index: 4;
       opacity: 0.65;
     }
@@ -368,6 +411,7 @@
 }
 
 .why-we {
+  padding-top: 100rem/16;
   text-align: center;
   margin: 0 0 140px 0;
   &__title {
